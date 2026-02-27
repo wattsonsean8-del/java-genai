@@ -252,21 +252,21 @@ public final class Client implements AutoCloseable {
                 this.debugConfig.clientMode());
       }
     } else {
-      if (!useVertexAI) {
-        this.apiClient =
-            new HttpApiClient(
-                /* apiKey= */ apiKey,
-                /* httpOptions= */ httpOptions,
-                /* clientOptions= */ clientOptions);
-      } else {
-        this.apiClient =
-            new HttpApiClient(
-                /* apiKey= */ apiKey,
-                /* project= */ project,
-                /* location= */ location,
-                /* credentials= */ credentials,
-                /* httpOptions= */ httpOptions,
-                /* clientOptions= */ clientOptions);
+        if (!useVertexAI) {
+          this.apiClient =
+              new HttpApiClient(
+                  /* apiKey= */ apiKey,
+                  /* httpOptions= */ httpOptions,
+                  /* clientOptions= */ clientOptions);
+        } else {
+          this.apiClient =
+              new HttpApiClient(
+                  /* apiKey= */ apiKey,
+                  /* project= */ project,
+                  /* location= */ location,
+                  /* credentials= */ credentials,
+                  /* httpOptions= */ httpOptions,
+                  /* clientOptions= */ clientOptions);
       }
     }
 
